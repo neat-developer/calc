@@ -25,11 +25,12 @@ gulp.task('sass', function () {
 
 
 gulp.task('js', () => {
-    gulp.src(['src/scripts/all.js', 'src/scripts/**/*.js', 'src/scripts/**/**/*.js', 'app/bower/'])
-        .pipe(babel({presets: ['@babel/env'], compact: true}))
+    gulp.src(['src/scripts/**/*.js', 'src/scripts/**/**/*.js', 'src/scripts/*.js'])
+        .pipe(babel({presets: ['@babel/env'], compact: false}))
         .pipe(concat('all.js'))
         .pipe(gulp.dest('app/scripts'));
 });
+
 
 gulp.task('build', ['js', 'sass']);
 gulp.task('default', ['connect']);

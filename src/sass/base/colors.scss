@@ -1,0 +1,37 @@
+$red-background: #c23946;
+$dark-background: #222;
+$gray-background: #2d2d2d;
+$orange-background: #f18e40;
+
+%red {
+  background: $red-background;
+  &:hover {
+    background: darken($red-background, 2%);
+    color: #eee;
+  }
+}
+
+%gray {
+  background: $gray-background;
+  &:hover {
+    background: darken($gray-background, 2%);
+    color: #eee;
+  }
+}
+
+%dark {
+  background: $dark-background;
+  &:hover {
+    background: darken($dark-background, 2%);
+    color: #eee;
+  }
+}
+
+%orange {
+  background: $orange-background;
+  &:hover {
+    background: darken($orange-background, 2%);
+    color: #eee;
+  }
+}
+

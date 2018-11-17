@@ -1,0 +1,96 @@
+$bkg-calc: #fff;
+$height-calc: 425px;
+$width-calc: 300px;
+$height-header: 110px;
+$height-button-container: $height-calc - $height-header;
+$buttons-height: $height-button-container / 5;
+
+.calculator-container {
+  height: $height-calc;
+  width: $width-calc;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  .calculator-header {
+    height: $height-header;
+    background: $bkg-calc;
+    position: relative;
+  }
+
+  .calculator-header-container {
+    height: 55px;
+    margin: auto;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .calculator-history {
+    color: #bbb;
+    font-size: 11px;
+    text-align: right;
+  }
+
+  .calculator-field {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .calculator-buttons {
+    height: $height-button-container;
+    list-style: none;
+    font-size: 0;
+  }
+
+  .calculator-buttons li {
+    cursor:pointer;
+    display: inline-block;
+    border-right: 1px solid #383838;
+    border-bottom: 1px solid #383838;
+
+    text-align: center;
+    line-height: $buttons-height;
+    color: #fafafa;
+    width: $width-calc / 4;
+    height: $buttons-height;
+    font-size: 20px;
+    @extend %gray;
+
+    &:nth-child(4n) {
+      border-right: none;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    &.btn-dark {
+      @extend %dark;
+    }
+
+    &.btn-red {
+      @extend %red;
+    }
+
+    &.btn-orange {
+      @extend %orange;
+    }
+
+    &.btn-zero {
+      width: 50%;
+    }
+  }
+
+}

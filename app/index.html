@@ -4,10 +4,45 @@
   <meta charset="UTF-8">
   <title>Template</title>
   <link rel="stylesheet" href="styles/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
+<!-- .calculator-container>.calculator-header+.calculator-buttons -->
 
-
+<div class="calculator-container" id="calc">
+  <div class="calculator-header">
+    <div class="calculator-header-container">
+      <div class="calculator-history"></div>
+      <span class="calculator-field"></span>
+    </div>
+  </div>
+  <ul class="calculator-buttons">
+    <!--The first line-->
+    <li class="btn-dark">DEL</li>
+    <li class="btn-dark">C</li>
+    <li class="btn-dark">%</li>
+    <li class="btn-red">/</li>
+    <!--The second line-->
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li class="btn-red">*</li>
+    <!-- The third line -->
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li class="btn-red">-</li>
+    <!-- The fourth line -->
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li class="btn-red">+</li>
+    <!-- The latest line-->
+    <li class="btn-zero">0</li>
+    <li>,</li>
+    <li class="btn-orange">=</li>
+  </ul>
+</div>
 
 <script async src="scripts/all.js"></script>
 </body>

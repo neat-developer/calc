@@ -1,6 +1,88 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  box-sizing: border-box; }
 
 body {
-  background: #eee; }
+  background: #e27442;
+  font-family: 'Roboto', sans-serif; }
+
+.calculator-container .calculator-buttons li.btn-red {
+  background: #c23946; }
+  .calculator-container .calculator-buttons li.btn-red:hover {
+    background: #ba3743;
+    color: #eee; }
+
+.calculator-container .calculator-buttons li {
+  background: #2d2d2d; }
+  .calculator-container .calculator-buttons li:hover {
+    background: #282828;
+    color: #eee; }
+
+.calculator-container .calculator-buttons li.btn-dark {
+  background: #222; }
+  .calculator-container .calculator-buttons li.btn-dark:hover {
+    background: #1d1d1d;
+    color: #eee; }
+
+.calculator-container .calculator-buttons li.btn-orange {
+  background: #f18e40; }
+  .calculator-container .calculator-buttons li.btn-orange:hover {
+    background: #f08836;
+    color: #eee; }
+
+.calculator-container {
+  height: 425px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+  .calculator-container .calculator-header {
+    height: 110px;
+    background: #fff;
+    position: relative; }
+  .calculator-container .calculator-header-container {
+    height: 55px;
+    margin: auto;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0; }
+  .calculator-container .calculator-history {
+    color: #bbb;
+    font-size: 11px;
+    text-align: right; }
+  .calculator-container .calculator-field {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+  .calculator-container .calculator-buttons {
+    height: 315px;
+    list-style: none;
+    font-size: 0; }
+  .calculator-container .calculator-buttons li {
+    cursor: pointer;
+    display: inline-block;
+    border-right: 1px solid #383838;
+    border-bottom: 1px solid #383838;
+    text-align: center;
+    line-height: 63px;
+    color: #fafafa;
+    width: 75px;
+    height: 63px;
+    font-size: 20px; }
+    .calculator-container .calculator-buttons li:nth-child(4n) {
+      border-right: none; }
+    .calculator-container .calculator-buttons li:last-child {
+      border: none; }
+    .calculator-container .calculator-buttons li.btn-zero {
+      width: 50%; }
