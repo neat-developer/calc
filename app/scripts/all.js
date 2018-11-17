@@ -21,11 +21,6 @@ function () {
   }
 
   _createClass(buttonEl, [{
-    key: "addValueToField",
-    value: function addValueToField() {
-      this.parent.addNumericToField(this.value);
-    }
-  }, {
     key: "onClick",
     value: function onClick() {
       switch (this.value) {
@@ -36,8 +31,10 @@ function () {
           }
           break;
 
-        case '%':
-          {}
+        case 'S':
+          {
+            this.parent.subscribeToMyChannel();
+          }
           break;
 
         case '/':
@@ -63,7 +60,7 @@ function () {
 
         default:
           {
-            this.addValueToField();
+            this.parent.addNumericToField(this.value + '');
           }
       }
     }
@@ -143,6 +140,13 @@ function () {
       this.updateFields();
     }
   }, {
+    key: "subscribeToMyChannel",
+    value: function subscribeToMyChannel() {
+      var calc = '<span class="calculator-subscribe">Hey, subscribe to my <a href="https://www.youtube.com/channel/UCof1QQG3jQcH0DTRdYOGLgg" target="_blank">youtube channel</a>  :)</span>';
+      this.elements["calculator-field"].innerHTML = '<span class="calculator-subscribe">I\'ll very happy to see u</span>';
+      this.elements["calculator-history"].innerHTML = calc;
+    }
+  }, {
     key: "getResult",
     value: function getResult() {
       if (!this.fValue) return false;
@@ -211,6 +215,6 @@ function isFloat(n) {
   return Number(n) === n && n % 1 !== 0;
 }
 "use strict";
-"use strict";
 
 var VERSION_APP = "1.0.0";
+"use strict";

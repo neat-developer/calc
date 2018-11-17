@@ -8,10 +8,6 @@ class buttonEl {
         this.el.onclick = this.onClick.bind(this);
     }
 
-    addValueToField() {
-        this.parent.addNumericToField(this.value);
-    }
-
     onClick() {
         switch (this.value) {
             case 'DEL':
@@ -19,8 +15,8 @@ class buttonEl {
                 this.parent.clearCalcValues(this.value === "DEL");
             }
                 break;
-            case '%': {
-
+            case 'S': {
+                this.parent.subscribeToMyChannel();
             }
                 break;
             case '/':
@@ -39,7 +35,7 @@ class buttonEl {
             }
                 break;
             default: {
-                this.addValueToField();
+                this.parent.addNumericToField(this.value + '');
             }
         }
     }
@@ -103,6 +99,12 @@ class Calc {
         this.updateHistoryField(this.fValue + ' ' + symbol);
         this.addNumericToField(0);
         this.updateFields();
+    }
+
+    subscribeToMyChannel() {
+        let calc = '<span class="calculator-subscribe">Hey, subscribe to my <a href="https://www.youtube.com/channel/UCof1QQG3jQcH0DTRdYOGLgg" target="_blank">youtube channel</a>  :)</span>';
+        this.elements["calculator-field"].innerHTML = '<span class="calculator-subscribe">I\'ll very happy to see u</span>' ;
+        this.elements["calculator-history"].innerHTML = calc;
     }
 
     getResult() {
